@@ -1,0 +1,8 @@
+2013-08-10 20:47:47,426 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(88)]: --------------------------------------------------------------------------------
+2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(89)]: JPPF version information: Version: 3.3.4, Build number: 1146, Build date: 2013-07-08 05:41 PDT
+2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(90)]: starting client with PID=13408, UUID=56BDF15A-65CD-7D2C-3489-F1513419BA6D
+2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(91)]: --------------------------------------------------------------------------------
+2013-08-10 20:47:47,429 [INFO ][org.jppf.client.AbstractGenericClient.<init>(102)]: JPPF client starting with sslEnabled = false
+2013-08-10 20:47:47,765 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(236)]: connection [driver-1] created
+2013-08-10 20:47:47,806 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-1 - ClassServer] Attempting connection to the class server at blackmachine:11111
+2013-08-10 20:47:47,822 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(91)]: [client: driver-1 - ClassServer] Reconnected to the class server
