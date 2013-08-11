@@ -1,55 +1,11 @@
-2013-08-10 20:47:47,426 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(88)]: --------------------------------------------------------------------------------
-2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(89)]: JPPF version information: Version: 3.3.4, Build number: 1146, Build date: 2013-07-08 05:41 PDT
-2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(90)]: starting client with PID=13408, UUID=56BDF15A-65CD-7D2C-3489-F1513419BA6D
-2013-08-10 20:47:47,428 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(91)]: --------------------------------------------------------------------------------
-2013-08-10 20:47:47,429 [INFO ][org.jppf.client.AbstractGenericClient.<init>(102)]: JPPF client starting with sslEnabled = false
-2013-08-10 20:47:47,765 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(236)]: connection [driver-1] created
-2013-08-10 20:47:47,806 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-1 - ClassServer] Attempting connection to the class server at blackmachine:11111
-2013-08-10 20:47:47,822 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(91)]: [client: driver-1 - ClassServer] Reconnected to the class server
-2013-08-10 20:59:09,660 [ERROR][org.jppf.client.BaseJPPFClientConnection.receiveBundleAndResults(242)]: 
-java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:264)
-	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:90)
-	at org.jppf.io.IOHelper.readData(IOHelper.java:120)
-	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:186)
-	at org.jppf.client.BaseJPPFClientConnection.receiveBundleAndResults(BaseJPPFClientConnection.java:212)
-	at org.jppf.client.BaseJPPFClientConnection.receiveResults(BaseJPPFClientConnection.java:260)
-	at org.jppf.client.BaseJPPFClientConnection.receiveResults(BaseJPPFClientConnection.java:277)
-	at org.jppf.client.balancer.ChannelWrapperRemote$RemoteRunnable.run(ChannelWrapperRemote.java:252)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:722)
-2013-08-10 20:59:09,662 [WARN ][org.jppf.client.balancer.ChannelWrapperRemote.run(267)]: java.io.EOFException: null
-2013-08-10 20:59:09,685 [WARN ][org.jppf.client.TaskServerConnectionHandler.init(107)]: java.net.SocketException: Software caused connection abort: socket write error
-2013-08-10 20:59:09,784 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(125)]: [driver-1 - ClassServer] caught java.io.EOFException: null, will re-initialise ...
-2013-08-10 20:59:09,785 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-1 - ClassServer] Attempting connection to the class server at blackmachine:11111
-2013-08-10 20:59:19,959 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(91)]: [client: driver-1 - ClassServer] Reconnected to the class server
-2013-08-10 20:59:20,654 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(236)]: connection [driver-2] created
-2013-08-10 20:59:20,662 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-2 - ClassServer] Attempting connection to the class server at blackmachine:11111
-2013-08-10 20:59:20,673 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(91)]: [client: driver-2 - ClassServer] Reconnected to the class server
-2013-08-10 20:59:37,738 [ERROR][org.jppf.client.BaseJPPFClientConnection.receiveBundleAndResults(242)]: 
-java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.jppf.comm.socket.AbstractSocketWrapper.readInt(AbstractSocketWrapper.java:264)
-	at org.jppf.io.SocketWrapperInputSource.readInt(SocketWrapperInputSource.java:90)
-	at org.jppf.io.IOHelper.readData(IOHelper.java:120)
-	at org.jppf.io.IOHelper.unwrappedData(IOHelper.java:186)
-	at org.jppf.client.BaseJPPFClientConnection.receiveBundleAndResults(BaseJPPFClientConnection.java:212)
-	at org.jppf.client.BaseJPPFClientConnection.receiveResults(BaseJPPFClientConnection.java:260)
-	at org.jppf.client.BaseJPPFClientConnection.receiveResults(BaseJPPFClientConnection.java:277)
-	at org.jppf.client.balancer.ChannelWrapperRemote$RemoteRunnable.run(ChannelWrapperRemote.java:252)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:722)
-2013-08-10 20:59:37,739 [WARN ][org.jppf.client.balancer.ChannelWrapperRemote.run(267)]: java.io.EOFException: null
-2013-08-10 20:59:38,842 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(125)]: [driver-1 - ClassServer] caught java.net.SocketException: Connection reset, will re-initialise ...
-2013-08-10 20:59:38,843 [WARN ][org.jppf.client.ClassServerDelegateImpl.run(125)]: [driver-2 - ClassServer] caught java.net.SocketException: Connection reset, will re-initialise ...
-2013-08-10 20:59:38,844 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-1 - ClassServer] Attempting connection to the class server at blackmachine:11111
-2013-08-10 20:59:38,844 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-2 - ClassServer] Attempting connection to the class server at blackmachine:11111
+2013-08-10 21:23:05,866 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(88)]: --------------------------------------------------------------------------------
+2013-08-10 21:23:05,868 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(89)]: JPPF version information: Version: 3.3.4, Build number: 1146, Build date: 2013-07-08 05:41 PDT
+2013-08-10 21:23:05,868 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(90)]: starting client with PID=11664, UUID=5171C56D-FFE0-6754-5B5B-FDE9FF2EABA5
+2013-08-10 21:23:05,868 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(91)]: --------------------------------------------------------------------------------
+2013-08-10 21:23:05,869 [INFO ][org.jppf.client.AbstractGenericClient.<init>(102)]: JPPF client starting with sslEnabled = false
+2013-08-10 21:23:06,648 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(236)]: connection [driver-1] created
+2013-08-10 21:23:06,653 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(80)]: [client: driver-1 - ClassServer] Attempting connection to the class server at blackmachine:11111
+2013-08-10 21:23:06,663 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(91)]: [client: driver-1 - ClassServer] Reconnected to the class server
+2013-08-10 21:26:11,293 [INFO ][org.jppf.application.template.TemplateApplicationRunner.output(236)]: Corridas: 121 Tiempo: 00:03:05.422
+2013-08-10 21:26:11,293 [INFO ][org.jppf.application.template.TemplateApplicationRunner.output(236)]: Tiempo promedio: 00:00:01.532
+2013-08-10 21:26:11,293 [INFO ][org.jppf.application.template.TemplateApplicationRunner.output(236)]: mejor solución  Resultado = 7.177079531303221 poblacion=100, generacion=100, pCruza=0.70000005, pMutacion=1.0000001, 

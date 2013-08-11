@@ -81,7 +81,7 @@ public class TemplateJPPFTask extends JPPFTask
         resultado.add( generacion );
         resultado.add( pCruza );
         resultado.add( pMutacion );
-        resultado.add( "Resultado = " + res + toString() );
+        resultado.add( "Resultado = " + res + " " + toString() );
         
         setResult( resultado ); 
         
