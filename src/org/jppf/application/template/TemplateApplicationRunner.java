@@ -21,7 +21,6 @@ import java.util.List;
 
 import org.jppf.client.*;
 import org.jppf.server.protocol.JPPFTask;
-import algoritmo.binario.AGBinario2;
 import java.util.ArrayList;
 import org.jppf.utils.JPPFConfiguration;
 import org.jppf.utils.StringUtils;
@@ -72,15 +71,21 @@ public class TemplateApplicationRunner {
       //Para medir el tiempo total que tarda y las iteraciones que realiza;
       long totalIterationTime = System.currentTimeMillis();
       int iter = 0;
-      //Creamos las jobs y las executamos
+      
+      //Creamos un job
+      JPPFJob job = new JPPFJob();
+      // give this job a readable unique id that we can use to monitor and manage it.
+      job.setName("Template Job Id");
+
+      //Agregamos las tareas
       for ( float cruza = 0.0f; cruza <= 1.1f; cruza += 0.1f )
           for ( float mutacion = 0.0f; mutacion <= 1.1f; mutacion += 0.1f ){
               iter++;
-              
-              JPPFJob job = runner.createJob( poblacion, generaciones, cruza, mutacion);
-              runner.executeBlockingJob(job);
-              
+              // add a task to the job.
+              job.addTask(new TemplateJPPFTask(poblacion, generaciones, cruza, mutacion) );
           }
+      //Ejecutamos el job
+      runner.executeNonBlockingJob(job);
 
       output("Corridas: " + iter + " Tiempo: " + ( StringUtils.toStringDuration( System.currentTimeMillis() - totalIterationTime ) ) );
       output("Tiempo promedio: " + ( StringUtils.toStringDuration( (System.currentTimeMillis() - totalIterationTime) / iter) ) );
@@ -161,7 +166,7 @@ public class TemplateApplicationRunner {
     JPPFResultCollector collector = submitNonBlockingJob(job);
 
     // the non-blocking job execution is asynchronous, we can do anything else in the meantime
-    System.out.println("Doing something while the job is executing ...");
+    //System.out.println("Doing something while the job is executing ...");
     // ...
 
     // We are now ready to get the results of the job execution.
