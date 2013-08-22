@@ -78,8 +78,8 @@ public class TemplateApplicationRunner {
       job.setName("Template Job Id");
 
       //Agregamos las tareas
-      for ( float cruza = 0.0f; cruza <= 1.1f; cruza += 0.1f )
-          for ( float mutacion = 0.0f; mutacion <= 1.1f; mutacion += 0.1f ){
+      for ( float cruza = 0.5f; cruza <= 1.1f; cruza += 0.1f )
+          for ( float mutacion = 0.5f; mutacion <= 1.1f; mutacion += 0.1f ){
               iter++;
               // add a task to the job.
               job.addTask(new TemplateJPPFTask(poblacion, generaciones, cruza, mutacion) );
